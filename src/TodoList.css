@@ -1,0 +1,11 @@
+input {
+    width: 25%;
+}
+
+.todo-container {
+    align-items: center;
+    margin-top: 60px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}

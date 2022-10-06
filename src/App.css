@@ -1,0 +1,140 @@
+.white-content {
+  background-color: #0c0101 !important;
+  mix-blend-mode: soft-light;
+  opacity: 150%;
+
+}
+
+#dark {
+  background-color: rgb(21, 11, 31);
+}
+
+body {
+  min-height: 100vh;
+  margin: auto;
+  align-items: center;
+}
+
+.hover-container  {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-color: yellow;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: clip;
+}
+
+.hover-container:hover .flower {
+  transform: scale(2);
+  opacity: 0.6;
+}
+
+.flower {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  transition: .7s;
+  backface-visibility: hidden;
+  background-color: yellow;
+}
+
+.hover-container:hover .todo-list {
+  opacity: 1;
+}
+
+.flower:hover {}
+
+.app {
+  padding-top: 10rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+}
+
+.todo-is-completed .checkbox {
+  color: #000;
+  background: rgb(0, 0, 0);
+}
+
+.todo-is-completed input {
+  text-decoration: line-through;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .2s ease-in-out;
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.checkbox:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.checkbox-checked {
+  color: #000;
+  background: rgb(0, 0, 0);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  line-height: 2rem;
+  width: 500px;
+  margin-left: 113px;
+}
+
+input {
+  color: rgba(215, 0, 0, 0.664);
+  font-size: 1.4rem;
+  outline: none;
+  width: 100%;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

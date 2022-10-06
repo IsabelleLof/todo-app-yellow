@@ -1,0 +1,22 @@
+.post-container {
+    display: flex;
+}
+
+.post-preview {
+    display: flex;
+    border: 1px solid black;
+}
+
+.delete-button {
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    width: 50px;
+    display: flex;
+}
+
+.delete-button:hover {
+    background-color: rgb(40, 10, 68);
+    color: white;
+}
