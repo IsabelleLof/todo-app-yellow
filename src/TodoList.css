@@ -1,11 +1,16 @@
+
 input {
     width: 25%;
 }
 
 .todo-container {
-    align-items: center;
-    margin-top: 60px;
-    justify-content: center;
     display: flex;
-    flex-direction: column;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    flex-direction: row;
 }

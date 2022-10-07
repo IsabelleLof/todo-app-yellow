@@ -52,7 +52,7 @@ body {
     align-items: center;
     justify-content: center;
   }
-  
+  /*
   .todo-list {
     align-items: center;
     display: flex;
@@ -72,6 +72,7 @@ body {
     align-items: center;
   }
   
+
   .todo-is-completed .checkbox {
     color: #000;
     background: rgb(0, 0, 0);
@@ -130,3 +131,4 @@ body {
       transform: rotate(360deg);
     }
   }
+  */

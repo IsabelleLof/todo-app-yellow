@@ -1,0 +1,11 @@
+.todo {
+    display: flex;
+    flex-direction: column;
+    width: 190px;
+    background: white;
+    height: 250px;
+    border: 1px solid #0c0101;
+    border-radius: 8px;
+    justify-content: center;
+    padding: 8px;
+}

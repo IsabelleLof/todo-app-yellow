@@ -15,8 +15,8 @@ const TodoList = ({todos, title, completed, todo, newTodos, newTodo, setTodo,
     //const id = props.id;
 
     return (
-        <div className="todo-container" key={todos.id}>
-            {isEditing ? (
+        <div className="">
+            {/*{isEditing ? (
                 <form onSubmit={handleEditFormSubmit}>
                     <h2>Edit Todo</h2>
                     <label htmlFor='editTodo'>Edit todo:</label>
@@ -30,7 +30,7 @@ const TodoList = ({todos, title, completed, todo, newTodos, newTodo, setTodo,
                     <button type='submit'>Update</button>
                     <button onClick={() => setIsEditing(false)}>Cancel</button>
                 </form>
-            ) : (
+            ) : ( */}
             <form onSubmit={handleFormSubmit}>
                 <h2>Add Todo</h2>
                 <label htmlFor='todo'></label>
@@ -43,8 +43,8 @@ const TodoList = ({todos, title, completed, todo, newTodos, newTodo, setTodo,
                 />
                 <button type='submit'>Add</button>
             </form> 
-            )}
-            <ul>
+            {/* )}*/}
+           <div className='todo-container' key={todos.id}>
             {todos.map((todo) => (
                 <Todo key={todo.id}
                 newTodos={newTodos}
@@ -53,7 +53,7 @@ const TodoList = ({todos, title, completed, todo, newTodos, newTodo, setTodo,
                 title={title}
                 completed={completed}
                 deleteTodo={deleteTodo} />))}
-            </ul>
+           </div> 
         </div>
     )
 }

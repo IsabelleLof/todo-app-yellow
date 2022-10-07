@@ -96,7 +96,7 @@ export default function Create (props) {
       }
     
     return (
-        <div>
+        <div className=''>
             <TodoList
             //title='Blogs'
             key={todo.id}
