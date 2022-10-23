@@ -39,7 +39,7 @@ const TodoList = ({todos, title, completed, todo, newTodos, newTodo, setTodo,
                   type="text"
                   placeholder='Create todo'
                   value={todo}
-                  onChange={(e) => setTodo(e.target.value)}
+                  onChange={handleEditInputChange}
                 />
                 <button type='submit'>Add</button>
             </form> 
@@ -47,11 +47,10 @@ const TodoList = ({todos, title, completed, todo, newTodos, newTodo, setTodo,
            <div className='todo-container' key={todos.id}>
             {todos.map((todo) => (
                 <Todo key={todo.id}
-                newTodos={newTodos}
-                newTodo={newTodo}
                 todo={todo} 
                 title={title}
                 completed={completed}
+                handleEditInputChange={handleEditInputChange}
                 deleteTodo={deleteTodo} />))}
            </div> 
         </div>

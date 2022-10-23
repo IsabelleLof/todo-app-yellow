@@ -1,6 +1,6 @@
 import './Create.css';
 import React, { useEffect, useState } from 'react';
-import TodoList from './TodoList.js';
+import TodoList from '../../TodoList.js';
 import axios from 'axios';
 
 export default function Create (props) {
@@ -103,7 +103,8 @@ export default function Create (props) {
             todos={todos} 
             deleteTodo={deleteTodo}
             handleEditClick={handleEditClick}
-            handleFormSubmit={handleFormSubmit} />
+            handleFormSubmit={handleFormSubmit}
+            handleEditInputChange={handleEditInputChange} />
         </div>
     )
 }

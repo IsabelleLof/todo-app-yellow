@@ -2,11 +2,11 @@ import { BrowserRouter,Routes ,Route } from 'react-router-dom';
 import './App.css';
 import flower from './assets/flower.jpg';
 import React, { createContext, useState } from 'react';
-import Homepage from './Homepage';
+import Homepage from './Pages/HomePage/Homepage';
 import Navbar from './Navbar';
-import Login from './Login';
-import Blog from './Blog';
-import Create from './Create';
+import Login from './Pages/Login/Login';
+import Blog from './Pages/Blog/Blog';
+import Create from './Pages/Create/Create';
 import { Button, Container, InputGroup } from 'reactstrap';
 import { ThemeContext, themes } from './ThemeContext';
 
