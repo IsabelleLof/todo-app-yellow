@@ -1,9 +1,9 @@
 import './Blog.css';
-import Post from './Post';
+import Post from '../../Post';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import PostList from './PostList';
-import purple from './assets/purple.jpg';
+import PostList from '../../PostList';
+import purple from '../../assets/purple.jpg';
 
 export default function Blog () {
 

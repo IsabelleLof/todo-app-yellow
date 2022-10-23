@@ -1,9 +1,9 @@
 import './Homepage.css';
 import React, { useState } from 'react';
-import flower from './assets/flower.jpg';
+import flower from '../../assets/flower.jpg';
 import { Link, NavLink } from 'react-router-dom';
-import PostList from './PostList';
-import Blog from './Blog';
+import PostList from '../../PostList';
+import Blog from '../Blog/Blog';
 
 export default function Homepage () {
 
