@@ -52,7 +52,56 @@ body {
     align-items: center;
     justify-content: center;
   }
-  /*
+
+  ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.save-button {
+  margin: auto;
+  cursor: pointer;
+}
+
+.todo-list {
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -413px;
+}
+
+input {
+  background: transparent;
+  border: 1px solid black;
+  color: rgba(215, 0, 0, 0.664);
+  font-size: 1.4rem;
+  outline: none;
+  height: 30px;
+
+}
+
+a {
+  text-decoration: none;
+  font-size: medium;
+  color: rgb(255, 0, 0);
+  font-size: x-large;
+}
+
+.title-style {
+  background: #d2b006;
+  border-radius: 25px;
+  padding: 17px;
+} 
+
+/*
+
+form {
+  background-color: white;
+  z-index: 0;
+}
+
   .todo-list {
     align-items: center;
     display: flex;

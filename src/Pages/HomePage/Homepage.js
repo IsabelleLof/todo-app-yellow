@@ -1,96 +1,47 @@
 import './Homepage.css';
 import React, { useState } from 'react';
 import flower from '../../assets/flower.jpg';
-import { Link, NavLink } from 'react-router-dom';
-import PostList from '../../PostList';
-import Blog from '../Blog/Blog';
 
-export default function Homepage () {
-
-// when the user scroll down the page is gonna be purple
-//and then after the scroll go back to the previos color (yellow)
-  function onScroll() {
-
-
-      return (
-          <div>
-
-          </div>
-      )
-  }  
-
-  
+export default function Homepage () {  
 
   const title = 'Welcome to your colorfull Todo App!';
 
-  //const link = 'http://www.goggle.com';
+  const [todos, setTodos] = useState([]);
 
-  //const styles = {
-  //  display: "alignCenter"
-  //}
-
-  const [todos, setTodos] = useState([
-    {
-      content: 'Clean bathroom',
-      completed: true,
-    },
-    {
-      content: 'Tidy livingroom',
-      completed: false,
-    },
-    {
-      content: 'Build a todo app in React',
-      completed: false,
-    }
-  ]);
+  const [todo, setTodo] = useState('');
 
   window.localStorage.setItem('todos', JSON.stringify(todos));
 
+  function handleFormSubmit (e) {
+    e.preventDefault();
 
-   function deleteTodo (id) {
-    const newTodos = todos.filter(todo => todo.id !== id);
-    setTodos(newTodos); 
- }
-
-   function handleKeyDown() {
-
-   }
-
-   //function createTodoAtIndex(event, i) {
-
-   //}
-
-   //function updateTodoAtIndex(event, i) {
-
-   //}
+    const newTodo = {
+      id: todo.content,
+      title: todo,
+      completed: false,
+  }
+  setTodos([...todos].concat(newTodo))
+  setTodo('');
+  }
 
 
     return (
         <div>
             <div className="app">
           <div className='container'>
-            <h1>{ title }</h1>
+            <h1 className='title-style'>{ title }</h1>
             <p>{ 'hello, what is your todo today?' }</p>  
          <div className='hover-container'> 
           <div className='overlay'>
           <img className="flower" src={flower} alt="image-banner" />
           </div>
-          <form className="todo-list">
-            <ul>
-              {todos.map((todo, i) => (
-              <div className="todo">
-                <div className="checkbox" />
-                <input 
-                  type="text" 
-                  value={todo.content}
-                  deleteTodo={deleteTodo} 
-                  onKeyDown={e => handleKeyDown(e, i)} 
-                  />
-              </div>
-              ))}
-            </ul>
-            <button>Save</button>
+          <form onSubmit={handleFormSubmit} className="todo-list">
+          <input type="title" 
+                 value={todo}
+                 onChange={(e) => setTodo(e.target.value)}/>
           </form>
+          <div>{todo.title}</div>
+          <button type='submit' className='save-button'>Add</button>
           </div>
           </div>
         </div>

@@ -10,22 +10,12 @@ export default function Create (props) {
            id: '',
            title: '',
            completed: false,
-         },
-         {
-           id: '',
-           title: '',
-           completed: false,
-         },
-         {
-           id: '',
-           title: '',
-           completed: false,
          }
        ]);
 
     const [isEditing, setIsEditing] = useState(false);
 
-    const [currentTodo, setCurrentTodo] = useState({});
+    const [currentTodo, setCurrentTodo] = useState('');
 
       React.useEffect(() => {
           fetchTodos()
@@ -44,6 +34,7 @@ export default function Create (props) {
 
     function handleInputChange(e) {
         setTodo(e.target.value);
+        //const newTodo = e.target.value;
     }
 
     function handleEditInputChange(e) {
@@ -55,17 +46,16 @@ export default function Create (props) {
         event.preventDefault();
 
         const newTodo = {
-            id: '',
+            id: new Date().getTime(),
             title: '',
             completed: false,
         }
         setTodos([...todos].concat(newTodo))
-
         setTodo(newTodo);
         console.log(newTodo);
 
-    window.localStorage.setItem('todos', JSON.stringify(todos));
-    setTodo(todos)
+    //window.localStorage.setItem('todos', JSON.stringify(todos));
+    //setTodo(todos)
 
     }
 
@@ -99,12 +89,12 @@ export default function Create (props) {
         <div className=''>
             <TodoList
             //title='Blogs'
-            key={todo.id}
             todos={todos} 
             deleteTodo={deleteTodo}
             handleEditClick={handleEditClick}
             handleFormSubmit={handleFormSubmit}
-            handleEditInputChange={handleEditInputChange} />
+            handleEditInputChange={handleEditInputChange}
+            handleInputChange={handleInputChange} />
         </div>
     )
 }

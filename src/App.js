@@ -21,7 +21,6 @@ function App() {
   return (
     //<ThemeContext.Provider>
     <div className='App'>
-              <h1 className="text-warning">Dark/Light mode</h1>
         <InputGroup>
           <ThemeContext.Consumer>
             {({ changeTheme }) => (

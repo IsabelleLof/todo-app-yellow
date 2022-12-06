@@ -9,3 +9,10 @@
     flex-direction: row;
     margin: 0;
 }
+
+form {
+    display: flex;
+    /* display: inline; */
+    justify-content: center;
+    align-items: center;
+}
